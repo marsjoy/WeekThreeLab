@@ -1,4 +1,4 @@
-package Models;
+package mars_williams.simplechat.Models;
 
 import com.parse.ParseClassName;
 import com.parse.ParseObject;

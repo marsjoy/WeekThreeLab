@@ -13,7 +13,7 @@ import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 
-import Models.Message;
+import mars_williams.simplechat.Models.Message;
 import mars_williams.simplechat.R;
 
 public class ChatActivity extends AppCompatActivity {

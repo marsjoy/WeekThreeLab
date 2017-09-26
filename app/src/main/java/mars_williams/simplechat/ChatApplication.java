@@ -1,9 +1,11 @@
+package mars_williams.simplechat;
+
 import android.app.Application;
 
 import com.parse.Parse;
 import com.parse.ParseObject;
 
-import Models.Message;
+import mars_williams.simplechat.Models.Message;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
