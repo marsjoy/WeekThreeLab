@@ -17,7 +17,6 @@ import mars_williams.simplechat.Models.Message;
 import mars_williams.simplechat.R;
 
 public class ChatActivity extends AppCompatActivity {
-
     static final String TAG = ChatActivity.class.getSimpleName();
 
     static final String USER_ID_KEY = "userId";
@@ -25,8 +24,7 @@ public class ChatActivity extends AppCompatActivity {
 
     EditText etMessage;
     Button btSend;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

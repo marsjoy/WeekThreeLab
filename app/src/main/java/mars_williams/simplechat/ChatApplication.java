@@ -15,6 +15,9 @@ import okhttp3.logging.HttpLoggingInterceptor;
  */
 
 public class ChatApplication extends Application {
+    private String APP_ID = "7829";
+    private String SERVER_URL = "https://chitchattycathy.herokuapp.com/";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -34,8 +37,8 @@ public class ChatApplication extends Application {
         // set applicationId and server based on the values in the Heroku settings.
         // any network interceptors must be added with the Configuration Builder given this syntax
         Parse.initialize(new Parse.Configuration.Builder(this)
-                .applicationId("7829") // should correspond to APP_ID env variable
+                .applicationId(APP_ID) // should correspond to APP_ID env variable
                 .clientBuilder(builder)
-                .server("https://chitchattycathy.herokuapp.com/").build());
+                .server(SERVER_URL).build());
     }
 }
