@@ -1,6 +1,7 @@
 package mars_williams.simplechat.Adapters;
 
 import android.content.Context;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -94,5 +95,11 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
             imageMe = itemView.findViewById(R.id.ivProfileMe);
             body = itemView.findViewById(R.id.tvBody);
         }
+    }
+
+    // Get the items in the reverse order:
+    void setupMessagePosting() {
+        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext.getApplicationContext());
+        linearLayoutManager.setReverseLayout(false);
     }
 }
