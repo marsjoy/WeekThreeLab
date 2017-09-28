@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "mars_williams.simplechat"
-        minSdkVersion 25
+        minSdkVersion 23
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -25,10 +25,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.parse:parse-android:1.16.2'
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
     compile 'com.android.support:recyclerview-v7:26.+'
+
+
     compile 'com.github.bumptech.glide:glide:3.8.0'
 
     testCompile 'junit:junit:4.12'

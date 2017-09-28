@@ -90,9 +90,9 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imageOther = (ImageView)itemView.findViewById(R.id.ivProfileOther);
-            imageMe = (ImageView)itemView.findViewById(R.id.ivProfileMe);
-            body = (TextView)itemView.findViewById(R.id.tvBody);
+            imageOther = itemView.findViewById(R.id.ivProfileOther);
+            imageMe = itemView.findViewById(R.id.ivProfileMe);
+            body = itemView.findViewById(R.id.tvBody);
         }
     }
 }

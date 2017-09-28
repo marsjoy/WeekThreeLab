@@ -60,26 +60,18 @@ public class ChatActivity extends AppCompatActivity {
     }
     void setupMessagePosting() {
         // Find the text field and button
-        etMessage = (EditText) findViewById(R.id.etMessage);
-        btSend = (Button) findViewById(R.id.btSend);
+        etMessage = findViewById(R.id.etMessage);
+        btSend = findViewById(R.id.btSend);
         // When send button is clicked, create message object on Parse
         btSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String data = etMessage.getText().toString();
 
-                //ParseObject message = ParseObject.create("Message");
-                //message.put(Message.USER_ID_KEY, ParseUser.getCurrentUser().getObjectId());
-                //message.put(Message.BODY_KEY, data);
-
-                /*** START OF CHANGE **/
-
                 // Using new `Message` Parse-backed model now
                 Message message = new Message();
                 message.setBody(data);
                 message.setUserId(ParseUser.getCurrentUser().getObjectId());
-
-                /*** END OF CHANGE **/
 
                 message.saveInBackground(new SaveCallback() {
                     @Override
