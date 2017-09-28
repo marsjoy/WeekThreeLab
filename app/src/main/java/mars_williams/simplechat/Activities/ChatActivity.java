@@ -12,11 +12,13 @@ import com.parse.LogInCallback;
 import com.parse.ParseAnonymousUtils;
 import com.parse.ParseException;
 import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 import mars_williams.simplechat.Models.Message;
 import mars_williams.simplechat.R;
 
 public class ChatActivity extends AppCompatActivity {
+
     static final String TAG = ChatActivity.class.getSimpleName();
 
     static final String USER_ID_KEY = "userId";
@@ -24,7 +26,8 @@ public class ChatActivity extends AppCompatActivity {
 
     EditText etMessage;
     Button btSend;
-    
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,12 +68,20 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String data = etMessage.getText().toString();
 
+                //ParseObject message = ParseObject.create("Message");
+                //message.put(Message.USER_ID_KEY, ParseUser.getCurrentUser().getObjectId());
+                //message.put(Message.BODY_KEY, data);
+
+                /*** START OF CHANGE **/
+
                 // Using new `Message` Parse-backed model now
                 Message message = new Message();
                 message.setBody(data);
                 message.setUserId(ParseUser.getCurrentUser().getObjectId());
 
-                message.saveInBackground(new com.parse.SaveCallback() {
+                /*** END OF CHANGE **/
+
+                message.saveInBackground(new SaveCallback() {
                     @Override
                     public void done(ParseException e) {
                         if(e == null) {
