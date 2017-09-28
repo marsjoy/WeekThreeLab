@@ -3,6 +3,7 @@
     android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvChat"
         android:transcriptMode="alwaysScroll"
@@ -12,6 +13,7 @@
         android:layout_above="@+id/rlSend"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
+
     <RelativeLayout
         android:id="@+id/rlSend"
         android:layout_alignParentBottom="true"
@@ -21,6 +23,7 @@
         android:paddingStart="0dp"
         android:paddingEnd="0dp"
         android:layout_height="wrap_content" >
+
         <EditText
             android:id="@+id/etMessage"
             android:layout_toStartOf="@+id/btSend"
@@ -32,16 +35,19 @@
             android:inputType="textShortMessage"
             android:imeOptions="actionSend"
             />
+
         <Button
             android:id="@+id/btSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:paddingEnd="10dp"
-            android:paddingStart="10dp"
             android:layout_alignParentEnd="true"
             android:text="@string/send"
             android:textSize="18sp" >
+
         </Button>
+
     </RelativeLayout>
+
 </RelativeLayout>
