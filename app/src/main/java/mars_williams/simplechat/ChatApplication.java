@@ -16,7 +16,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 
 public class ChatApplication extends Application {
     private String APP_ID = "7829";
-    private String SERVER_URL = "https://chitchattycathy.herokuapp.com/";
+    private String SERVER_URL = "https://chitchattycathy.herokuapp.com/parse";
 
     @Override
     public void onCreate() {
@@ -38,6 +38,7 @@ public class ChatApplication extends Application {
         // any network interceptors must be added with the Configuration Builder given this syntax
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId(APP_ID) // should correspond to APP_ID env variable
+                .clientKey(null)
                 .clientBuilder(builder)
                 .server(SERVER_URL).build());
     }
